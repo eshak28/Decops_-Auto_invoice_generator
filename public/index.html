@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Invoice Generator</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Auto Invoice Generator</h1>
+    <p>Create beautiful invoices as downloadable PDFs (18% tax included).</p>
+  </header>
+
+  <main class="container">
+    <form id="invoice-form">
+      <section class="card">
+        <h2>Customer</h2>
+        <div class="grid">
+          <label>
+            <span>Customer Name<span class="req">*</span></span>
+            <input id="customerName" name="customerName" type="text" placeholder="John Doe" required />
+          </label>
+          <label>
+            <span>Invoice #</span>
+            <input id="invoiceNumber" name="invoiceNumber" type="text" placeholder="INV-1001" />
+          </label>
+          <label>
+            <span>Date</span>
+            <input id="invoiceDate" name="invoiceDate" type="date" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Items</h2>
+          <button id="add-item" type="button" class="btn btn-secondary">+ Add Item</button>
+        </div>
+        <div id="items" class="items"></div>
+      </section>
+
+      <section class="card totals">
+        <div class="totals-row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+        <div class="totals-row"><span>Tax (18%)</span><strong id="tax">$0.00</strong></div>
+        <div class="totals-row grand"><span>Total</span><strong id="total">$0.00</strong></div>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Generate PDF</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="app-footer">
+    <small>Built with Node.js, Express, and PDFKit.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

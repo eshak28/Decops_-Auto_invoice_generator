@@ -1,0 +1,17 @@
+{
+  "name": "auto-invoice-generator",
+  "version": "1.0.0",
+  "description": "Full-stack Auto Invoice Generator using Node.js, Express, PDFKit, and HTML/CSS frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["invoice", "pdf", "express", "pdfkit", "node"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pdfkit": "^0.15.0"
+  }
+}
