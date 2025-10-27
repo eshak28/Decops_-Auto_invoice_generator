@@ -16,8 +16,7 @@ A full-stack application for generating professional PDF invoices with a modern 
 
 **Frontend:**
 - React 18 with TypeScript
-- Tailwind CSS for styling
-- Lucide React for icons
+- Docker
 - Vite for build tooling
 
 **Backend:**
@@ -59,10 +58,11 @@ A full-stack application for generating professional PDF invoices with a modern 
 ### Using the Application
 
 1. Enter the customer name
-2. Add invoice items with name, description, quantity, and price
+2. Add invoice items with name, description, quantity, and price (in Rupees)
 3. Click "Add Item" to add more items
-4. Review the invoice summary (subtotal, tax, total)
+4. Review the invoice summary (subtotal, tax, total) - all amounts shown in ₹
 5. Click "Generate & Download Invoice" to create and download the PDF
+6. The PDF will use "Rs." notation for all amounts to ensure proper rendering
 
 ## Docker Deployment
 
@@ -154,13 +154,14 @@ The generated PDF invoice includes:
 - **Itemized Table** with:
   - Item name and description
   - Quantity
-  - Unit price
-  - Line amount
+  - Unit price in Indian Rupees (Rs.)
+  - Line amount in Indian Rupees (Rs.)
 - **Financial Summary:**
-  - Subtotal
-  - Tax (18%)
-  - Total amount
+  - Subtotal in Rs.
+  - Tax (18%) in Rs.
+  - Total amount in Rs.
 - **Professional Footer** with payment terms and contact info
+- **Proper formatting** to prevent text collision with large amounts
 
 ## Customization
 
